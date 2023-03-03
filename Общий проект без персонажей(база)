@@ -1,0 +1,93 @@
+static void Main(string[] args)
+        {
+            string nameOfPlayer;
+            int health, damage, armor;
+            string Class;
+            Console.WriteLine("Добро пожаловать в подземелье, как тебя называть, герой?");
+            Console.Write("Ваше имя: ");
+            nameOfPlayer = Console.ReadLine();
+            Console.WriteLine($"Здравствуй, {nameOfPlayer}, какая у тебя сила?");
+            Console.WriteLine("Выбери свой класс из списка: ебучий дединсайд(ед) hp=1,dmg=1,armor=0 Особенность:призывает мать из могилы, если встанет на колени hp=100,dmg=50,armor=50");
+            Console.WriteLine("Выбери свой класс из списка: азазин(азаз) hp=50,dmg=25,armor=30 Особенность: курит шмаль и прибавляет 60hp и 20dmg");
+            Console.WriteLine("Выбери свой класс из списка: z-воин(z) hp=100,dmg=50,armor=50 Особенность: настолько шизик, что при упоминании об укропах, лупит себя по голове и отнимает себе 10hp");
+            Class = Console.ReadLine();
+            /*  switch (Class)
+              {
+                  case "ед":
+                      Console.WriteLine("Вы выбрали ебучего дединсайда");
+                      break;
+                       case "азаз":
+                      Console.WriteLine("Вы выбрали азазина");
+                      break;
+                       case "z":
+                      Console.WriteLine("Вы выбрали z-воина ");
+                      break;
+
+             } */
+            if (Class == "ед")
+            {
+                health = 1;
+                damage = 1;
+                armor = 0;
+                Console.Write($"Чтож, {nameOfPlayer}, ебучий дединсайд, перед тобой 3 комнаты");
+                string komnata;
+                Console.WriteLine("к какой комнате подойдешь,1,2,3?");
+                komnata = Console.ReadLine();
+                if(komnata=="1")
+                {
+                    Console.WriteLine("Вы слышите женское хихиканье в темноте, и вас это очень завораживает и возбуждает и вы хотите пойти туда");
+                    Console.Write("Пойдем туда?   ДА/НЕТ");
+                    string solving;
+                    solving = Console.ReadLine();
+                    if(solving=="ДА")
+                    {
+                        Console.WriteLine("Вы настолько возбуждены, что на миг забыли,а вдруг это ловушка"+"Призовете ли мать в случае нападения? ДА/НЕТ ");
+                        string solving2;
+                        solving2 = Console.ReadLine();
+                        if(solving2=="ДА")
+                        {
+                            Console.WriteLine("Вы решили перебороть свои девстенные шалости и сыграть умом, призвав мать");
+                            Console.WriteLine("Вы идете вдоль темной комнаты, женское хихиканье становится все ближе и ближе\nВы решаетесь спросить: 1:ЭЙ ТЯНКА, ПОМУРЧИ В ДИСКОРДИКЕ, Я НА СФЕ ТАЙМЛЮ ЕУЛ ПОД УЛЬТ+\t+2:Кто здесь? Помагити");
+                            string solving3;
+                            solving3 = Console.ReadLine();
+                            if(solving3=="1")
+                            {
+                                Console.WriteLine("Из темноты прекращается хихиканье, но сменяется плачем\nВы в неудоумении(неужели я бездарный?)\nВы все таки решаетесь продолжить идти, мать с вами(пока)\nПриблизившись вы видите топ тянку 14.1, но плачущую.\nУвидев вас, она снова рассмеялась и превратилась в поебень...\nВы испугались, но так как с вами призванная мать, она вас зашитит");
+                                Console.WriteLine("ДРАКА БЛЯТЬ, ну ты и токсик ");
+                                int hp_hero = 100, dmg_hero = 50, armor_hero = 50;
+                                int hp_enemy = 200, dmg_enemy = 35, armor_enemy = 25;
+                                Random rand= new Random();
+                                while(hp_hero>0 &&hp_enemy>0)
+                                {
+                                    hp_hero-=rand.Next(dmg_enemy)/100*armor_hero;
+                                    hp_enemy-=rand.Next(dmg_hero)/100*armor_enemy;
+                                }
+                            }
+                        }    
+                    }    
+                }
+            }
+            if (Class == "азаз")
+            {
+                health = 1;
+                damage = 1;
+                armor = 0;
+                Console.Write($"Чтож, {nameOfPlayer}, азазин, перед тобой 3 комнаты");
+                string komnata;
+                Console.WriteLine("к какой комнате подойдешь,1,2,3?");
+                komnata = Console.ReadLine();
+
+            }
+            if (Class == "z")
+            {
+                health = 1;
+                damage = 1;
+                armor = 0;
+                Console.Write($"Чтож, {nameOfPlayer}, z-воин, перед тобой 3 комнаты");
+                string komnata;
+                Console.WriteLine("к какой комнате подойдешь,1,2,3?");
+                komnata = Console.ReadLine();
+                
+
+            }
+        }
